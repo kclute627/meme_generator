@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchMemesJson } from '../actions/index';
 import MemeItem from './MemeItem';
 import { Form, FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
+import MyMemes from './MyMemes';
 import '../styles/index.css';
 
 
@@ -35,7 +36,11 @@ class App extends Component {
          const  memeItem = (
             this.props.memes.slice(0, this.state.memeLimit).map(cur =>{
                 return (          
-                    <MemeItem key={cur.id} meme={cur}/>
+                    <MemeItem 
+                    key={cur.id} 
+                    meme={cur}
+                    text0= {this.state.text0}
+                    text1 = {this.state.text1}/>
                 )
             })
           
@@ -44,6 +49,7 @@ class App extends Component {
         return(
             <div>
                 <h2><u>Welcome to the Meme Generator!!!</u></h2>
+                <MyMemes />
                 <h4><i>Write Some Text</i></h4>
                 <Form inline>
                     <FormGroup>

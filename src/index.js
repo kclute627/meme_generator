@@ -6,12 +6,14 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
 import memes from './reducers/index';
+import myMemes from './reducers/myMemes';
 
 
 
 
 const rootReducer = combineReducers({
-    getMemes: memes
+    getMemes: memes,
+    myMemes: myMemes,
 })
 
 

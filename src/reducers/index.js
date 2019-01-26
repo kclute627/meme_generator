@@ -5,6 +5,7 @@ import {  SET_MEMES } from '../actions/index';
 const initialState = {
    
     memesArr: [],
+
     
 }
 
@@ -23,6 +24,8 @@ const memes = (state = initialState, action)=> {
     }
 
 }
+
+
 
 
 
